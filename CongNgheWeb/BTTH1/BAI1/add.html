@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm sản phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #6c63ff;
+        }
+
+        .form-group button {
+            background: #6c63ff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background: #5548d9;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .form-footer a {
+            color: #6c63ff;
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Thêm sản phẩm</h2>
+        <form method="POST" enctype="multipart/form-data" action="addflower.php">
+            <div class="form-group">
+                <label for="name">Tên sản phẩm:</label>
+                <input type="text" name="name" id="name" placeholder="Nhập tên sản phẩm" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Ảnh sản phẩm:</label>
+                <input type="file" name="image" id="image" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Mô tả:</label>
+                <textarea name="description" id="description" placeholder="Nhập mô tả sản phẩm" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Thêm sản phẩm</button>
+            </div>
+        </form>
+        <div class="form-footer">
+            <a href="index.php">Quay lại trang chủ</a>
+        </div>
+    </div>
+</body>
+</html>
